@@ -836,7 +836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
-  _rollDistance: 100
+  _rollDistance: 5
   _stick: {fileID: 977744692}
 --- !u!114 &1377276949
 MonoBehaviour:

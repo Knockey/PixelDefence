@@ -40,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
     private void Roll()
     {
         Rolled?.Invoke();
+
         Move(_direction, _rollDistance, 3f);
     }
 
