@@ -4,6 +4,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(PlayerMovement))]
 public class PlayerMeleeAttack : MonoBehaviour
 {
+    [SerializeField] private int _damage;
     [SerializeField] private AttackZone _attackZone;
 
     private PlayerMovement _movement;
@@ -40,7 +41,7 @@ public class PlayerMeleeAttack : MonoBehaviour
         Attacked?.Invoke();
         foreach (var enemy in _attackZone.GetEnemiesInRange())
         {
-            Debug.Log(enemy.name);
+            enemy.TakeDamage(_damage);
         }
     }
 
