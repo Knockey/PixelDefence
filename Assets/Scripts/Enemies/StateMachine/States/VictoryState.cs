@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-public class VictoryState : MonoBehaviour
+public class VictoryState : State
 {
     private Animator _animator;
 

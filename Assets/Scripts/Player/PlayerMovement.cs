@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _rollDistance;
     [SerializeField] private PlayerMovementStick _stick;
 
-    private float _previousXPosition;
     private Vector2 _direction = Vector2.right;
 
     public event UnityAction<bool> Turned;
@@ -34,25 +33,25 @@ public class PlayerMovement : MonoBehaviour
     private void OnStickMoved(Vector2 direction)
     {
         _direction = direction;
-        Move(_direction, _speed, 1f);
+        Move(_direction, _speed);
     }
 
     private void Roll()
     {
         Rolled?.Invoke();
 
-        Move(_direction, _rollDistance, 3f);
+        Move(_direction, _rollDistance);
     }
 
-    private void Move(Vector2 direction, float speed, float moveTowardsStep)
+    private void Move(Vector2 direction, float speed)
     {
-        _previousXPosition = transform.position.x;
+        float previousXPosition = transform.position.x;
 
         Vector3 nextPosition = new Vector3(direction.x, 0f, direction.y);
-        nextPosition = (speed * Time.deltaTime * nextPosition) + transform.position;
-        transform.position = Vector3.MoveTowards(transform.position, nextPosition, moveTowardsStep);
+        nextPosition = (speed * nextPosition) + transform.position;
+        transform.position = Vector3.MoveTowards(transform.position, nextPosition, speed * Time.deltaTime);
 
-        Turned?.Invoke(_previousXPosition > transform.position.x);
+        Turned?.Invoke(previousXPosition > transform.position.x);
     }
 }
 

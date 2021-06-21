@@ -7,12 +7,12 @@ public class AttackState : State
     [SerializeField] private float _attackDelay;
 
     private float _timePassedAfterAttack;
-    /*private Animator _animator;
+    private Animator _animator;
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
-    }*/
+    }
 
     private void Update()
     {
@@ -27,7 +27,7 @@ public class AttackState : State
 
     private void Attack()
     {
-        //_animator.Play("Attack");
+        _animator.Play("Attack");
         Target.ApplyDamage(_damage);
     }
 }
