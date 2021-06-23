@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(PlayerMovement))]
 public class PlayerMeleeAttack : MonoBehaviour
 {
     [SerializeField] private int _damage;
     [SerializeField] private AttackZone _attackZone;
+    [SerializeField] private Button _attackButton;
 
     private PlayerMovement _movement;
     private bool _isTurnedRight;
@@ -20,12 +22,14 @@ public class PlayerMeleeAttack : MonoBehaviour
     private void OnEnable()
     {
         _movement.Turned += OnTurned;
+        _attackButton.onClick.AddListener(Attack);
     }
 
 
     private void OnDisable()
     {
         _movement.Turned -= OnTurned;
+        _attackButton.onClick.RemoveListener(Attack);
     }
 
     private void Update()
@@ -41,7 +45,7 @@ public class PlayerMeleeAttack : MonoBehaviour
         Attacked?.Invoke();
         foreach (var enemy in _attackZone.GetEnemiesInRange())
         {
-            enemy.TakeDamage(_damage);
+            enemy.ApplyDamage(_damage);
         }
     }
 

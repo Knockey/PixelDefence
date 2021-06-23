@@ -1,10 +1,32 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp-firstpass.dll:
+    - IJunior.TypedScenes.TypedProcessor
     Assembly-CSharp.dll:
+    - AttackZone
     - CameraMovement
+    - ColorSwap_HeroKnight
+    - DeathState
+    - DestroyEvent_HeroKnight
+    - Enemy
+    - EnemyStateMachine
+    - HeroKnight
+    - MeleeAttackState
+    - MoveState
     - Player
+    - PlayerAnimation
+    - PlayerMeleeAttack
     - PlayerMovement
     - PlayerMovementStick
+    - Sensor_HeroKnight
+    - Spawner
+    - TransitionByDeath
+    - TransitionByDistance
+    - TransitionByTargetDeath
+    - TransitionByTargetOutOfRange
+    - VictoryState
+    DOTween.dll:
+    - DG.Tweening.Core.DOTweenSettings
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -12,11 +34,14 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - TestRunner.Callbacks.WindowResultUpdaterDataHolder
@@ -27,11 +52,12 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
   sceneClasses:
-    Assets/Scenes/Level_1.1.unity:
+    Assets/Plugins/TypedScenes/Samples/SampleScene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -44,12 +70,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 49
-      Script: {instanceID: 0}
-    - Class: 54
-      Script: {instanceID: 0}
-    - Class: 65
-      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
@@ -59,31 +79,136 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11250}
+      Script: {instanceID: 13168}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 258
+      Script: {instanceID: 0}
+    Assets/Scenes/Level_1_1.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 62
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11448}
+      Script: {instanceID: -586}
     - Class: 114
-      Script: {instanceID: 11834}
+      Script: {instanceID: 608}
     - Class: 114
-      Script: {instanceID: 11854}
+      Script: {instanceID: 11282}
     - Class: 114
-      Script: {instanceID: 11862}
+      Script: {instanceID: 11498}
     - Class: 114
-      Script: {instanceID: 11952}
+      Script: {instanceID: 11554}
     - Class: 114
-      Script: {instanceID: 12154}
+      Script: {instanceID: 11772}
     - Class: 114
-      Script: {instanceID: 12178}
+      Script: {instanceID: 11866}
     - Class: 114
-      Script: {instanceID: 12446}
+      Script: {instanceID: 11912}
     - Class: 114
-      Script: {instanceID: 12460}
+      Script: {instanceID: 11932}
     - Class: 114
-      Script: {instanceID: 12708}
+      Script: {instanceID: 11940}
     - Class: 114
-      Script: {instanceID: 12862}
+      Script: {instanceID: 12040}
     - Class: 114
-      Script: {instanceID: 13064}
+      Script: {instanceID: 12106}
+    - Class: 114
+      Script: {instanceID: 12244}
+    - Class: 114
+      Script: {instanceID: 12262}
+    - Class: 114
+      Script: {instanceID: 12288}
+    - Class: 114
+      Script: {instanceID: 12338}
+    - Class: 114
+      Script: {instanceID: 12426}
+    - Class: 114
+      Script: {instanceID: 12568}
+    - Class: 114
+      Script: {instanceID: 12576}
+    - Class: 114
+      Script: {instanceID: 12584}
+    - Class: 114
+      Script: {instanceID: 12696}
+    - Class: 114
+      Script: {instanceID: 12720}
+    - Class: 114
+      Script: {instanceID: 12770}
+    - Class: 114
+      Script: {instanceID: 12790}
+    - Class: 114
+      Script: {instanceID: 12810}
+    - Class: 114
+      Script: {instanceID: 12838}
+    - Class: 114
+      Script: {instanceID: 12858}
+    - Class: 114
+      Script: {instanceID: 12898}
+    - Class: 114
+      Script: {instanceID: 12900}
+    - Class: 114
+      Script: {instanceID: 12920}
+    - Class: 114
+      Script: {instanceID: 12994}
+    - Class: 114
+      Script: {instanceID: 13028}
+    - Class: 114
+      Script: {instanceID: 13092}
+    - Class: 114
+      Script: {instanceID: 13168}
+    - Class: 114
+      Script: {instanceID: 13242}
+    - Class: 114
+      Script: {instanceID: 13244}
+    - Class: 114
+      Script: {instanceID: 15234}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -107,6 +232,12 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 156049354
+      Script: {instanceID: 0}
+    - Class: 483693784
+      Script: {instanceID: 0}
+    - Class: 1839735485
       Script: {instanceID: 0}
     - Class: 1953259897
       Script: {instanceID: 0}
@@ -203,6 +334,18 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
+      Hash: 3d156b0ddfc5be2bd21604bad9ea0820
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: State
+  - hash:
+      serializedVersion: 2
+      Hash: 2e2ede7715110e37a9f2c9649747060e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyStateMachine
+  - hash:
+      serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -257,10 +400,22 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
+      Hash: 78899499d3a590b2ca4fe571b9438780
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TransitionByDistance
+  - hash:
+      serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: 
+    className: IntHandler
   - hash:
       serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
@@ -273,6 +428,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AttackZone
   - hash:
       serializedVersion: 2
       Hash: 5f170942ee57c7a568f5bcfc7521adea
@@ -323,6 +484,18 @@ ScriptsOnlyBuild:
     className: CameraMovement
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: 
+    className: MultiHandler
+  - hash:
+      serializedVersion: 2
+      Hash: e5cda9808776d58e33279d68c8a61b17
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TransitionByTargetOutOfRange
+  - hash:
+      serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -341,13 +514,25 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
+      Hash: 704dcd31abc789439bc3f3cd10b58c2b
+    assemblyName: DOTween.dll
+    namespaceName: DG.Tweening.Core
+    className: DOTweenComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 179648033371456981a3c08cb9f47477
+    assemblyName: DOTween.dll
+    namespaceName: DG.Tweening.Core
+    className: DOTweenSettings
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: ef68334aa2c2bd87515ed77026440f22
+      Hash: e317092c673b2218153d711f2c06557d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement
@@ -375,6 +560,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: ffafd331017ccf329701e70dd1b686f7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Enemy
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -407,6 +598,12 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
+      Hash: ae39f25ef66b4ba988ee5654d6dab9e5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TransitionByDeath
+  - hash:
+      serializedVersion: 2
       Hash: 87ad3705a58f19c47136728d4a6e9c47
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -425,6 +622,12 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: 
+    className: StringHandler
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -437,10 +640,34 @@ ScriptsOnlyBuild:
     className: DestroyEvent_HeroKnight
   - hash:
       serializedVersion: 2
+      Hash: 3d156b0ddfc5be2bd21604bad9ea0820
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VictoryState
+  - hash:
+      serializedVersion: 2
+      Hash: 8dd3b48b0a56127d04a73b36ea243a8e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerMeleeAttack
+  - hash:
+      serializedVersion: 2
       Hash: 6939772cb3ce775a8e8d99f332534491
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 9b3dfb87ac32f5ba852b32abfcf5659c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MeleeAttackState
+  - hash:
+      serializedVersion: 2
+      Hash: b8f58fdbfe462e8cbaed0310881f89b1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MoveState
   - hash:
       serializedVersion: 2
       Hash: f336e086360abe49a3323e5f1583c35a
@@ -467,10 +694,22 @@ ScriptsOnlyBuild:
     className: HeroKnight
   - hash:
       serializedVersion: 2
+      Hash: 31861a563053d9f88bc7c3390596a993
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DeathState
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Sensor_HeroKnight
+  - hash:
+      serializedVersion: 2
+      Hash: 610c85aec29e7871706bb997a877a50a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerAnimation
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -485,6 +724,18 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: 
+    className: CustomClassHandler
+  - hash:
+      serializedVersion: 2
+      Hash: ae39f25ef66b4ba988ee5654d6dab9e5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TransitionByTargetDeath
+  - hash:
+      serializedVersion: 2
       Hash: 8cd1cbba27f3cb1717254f668e9e0d5a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -497,10 +748,22 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
+      Hash: ae39f25ef66b4ba988ee5654d6dab9e5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Transition
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayModeRunnerCallback
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: IJunior.TypedScenes
+    className: TypedProcessor
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -585,7 +848,14 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 49e88bf56e8e3155e123ef0b66c4f342
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Spawner
   platform: 13
   scenePathNames:
-  - Assets/Scenes/Level_1.1.unity
+  - Assets/Scenes/Level_1_1.unity
+  - Assets/Plugins/TypedScenes/Samples/SampleScene.unity
   playerPath: C:/Users/borat/Desktop/123.apk

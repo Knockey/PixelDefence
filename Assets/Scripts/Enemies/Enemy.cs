@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IApplyDamage
 {
     [SerializeField] private int _health;
     [SerializeField] private int _reward;
-    //UDALIT NAHUI SERIALIZE
-    [SerializeField] private Player _target;
+    
+    private Player _target;
 
     public Player Target => _target;
     public int Reward => _reward;
@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
         Died?.Invoke(this);
     }
 
-    public void TakeDamage(int damage)
+    public void ApplyDamage(int damage)
     {
         _health -= damage;
         if (_health <= 0)

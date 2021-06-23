@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-public class AttackState : State
+public class MeleeAttackState : State
 {
     [SerializeField] private int _damage;
     [SerializeField] private float _attackDelay;

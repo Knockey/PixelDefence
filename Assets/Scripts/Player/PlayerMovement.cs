@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private float _rollDistance;
     [SerializeField] private PlayerMovementStick _stick;
+    [SerializeField] private Button _rollButton;
 
     private Vector2 _direction = Vector2.right;
 
@@ -15,11 +17,13 @@ public class PlayerMovement : MonoBehaviour
     private void OnEnable()
     {
         _stick.StickMovedInDirection += OnStickMoved;
+        _rollButton.onClick.AddListener(Roll);
     }
 
     private void OnDisable()
     {
         _stick.StickMovedInDirection -= OnStickMoved;
+        _rollButton.onClick.RemoveListener(Roll);
     }
 
     private void Update()
