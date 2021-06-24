@@ -69,7 +69,8 @@
     <Compile Include="Assets\Resources\Hero Knight - Pixel Art\Demo\HeroKnight.cs" />
     <Compile Include="Assets\Resources\Hero Knight - Pixel Art\Demo\Sensor_HeroKnight.cs" />
     <Compile Include="Assets\Scenes\Typed\Demo.cs" />
-    <Compile Include="Assets\Scenes\Typed\Level_1_1.cs" />
+    <Compile Include="Assets\Scenes\Typed\LevelForest.cs" />
+    <Compile Include="Assets\Scenes\Typed\SceneDemo.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\Enemies\Spawner\Spawner.cs" />
     <Compile Include="Assets\Scripts\Enemies\Spawner\Wave.cs" />
