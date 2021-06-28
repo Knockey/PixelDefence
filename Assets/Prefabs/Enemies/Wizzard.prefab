@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3671020822836228481}
   - component: {fileID: 6812554560159533568}
   - component: {fileID: 1294774594729314489}
-  - component: {fileID: 6465997961125162883}
+  - component: {fileID: 6658927388941383719}
   - component: {fileID: 1288547251220522429}
   - component: {fileID: 9082461322368473947}
   - component: {fileID: 2519902758987377287}
@@ -39,7 +39,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 51.1, y: -0.02, z: 45.257}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1096266659336100332}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -181,10 +182,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af353c31d6bb5045a661f4faa50e7b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetState: {fileID: 6465997961125162883}
-  _distance: 1
+  _targetState: {fileID: 6658927388941383719}
+  _distance: 5
   _dispersion: 0.1
---- !u!114 &6465997961125162883
+--- !u!114 &6658927388941383719
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -193,15 +194,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 271736156875641469}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a0b290c0b41537498343cf68fd2a314, type: 3}
+  m_Script: {fileID: 11500000, guid: 4029782c1360bbb49885aace793dd429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _transitions:
+  - {fileID: 1288547251220522429}
   - {fileID: 9082461322368473947}
   - {fileID: 7821446312796233263}
-  - {fileID: 1288547251220522429}
   _damage: 2
   _attackDelay: 1
+  _fireball: {fileID: 8938601001084663936, guid: c97d5d3c01071d84e9ea6caf42817266,
+    type: 3}
+  _shootPoint: {fileID: 1096266659336100332}
 --- !u!114 &1288547251220522429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _targetState: {fileID: 6812554560159533568}
-  _attackDistance: 1
+  _attackDistance: 9
   _dispersion: 0.1
 --- !u!114 &9082461322368473947
 MonoBehaviour:
@@ -270,3 +274,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _transitions: []
   _timeUntillDeath: 1
+--- !u!1 &8449908805326823415
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1096266659336100332}
+  m_Layer: 0
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1096266659336100332
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8449908805326823415}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.604, y: 1.125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 271736156875641465}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

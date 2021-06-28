@@ -3,6 +3,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(Player))]
 [RequireComponent(typeof(PlayerMovement))]
 [RequireComponent(typeof(PlayerMeleeAttack))]
 public class PlayerAnimation : MonoBehaviour
@@ -10,6 +11,7 @@ public class PlayerAnimation : MonoBehaviour
     [SerializeField] private PlayerMovementStick _movementStick;
     
     private Animator _animator;
+    private Player _player;
     private PlayerMovement _movement;
     private PlayerMeleeAttack _meleeAttack;
     private SpriteRenderer _spriteRenderer;
@@ -17,6 +19,7 @@ public class PlayerAnimation : MonoBehaviour
 
     private void Awake()
     {
+        _player = GetComponent<Player>();
         _animator = GetComponent<Animator>();
         _movement = GetComponent<PlayerMovement>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -27,6 +30,7 @@ public class PlayerAnimation : MonoBehaviour
 
     private void OnEnable()
     {
+        _player.Died += OnDied;
         _movementStick.StickMoved += OnStickMoved;
         _movement.Turned += OnTurned;
         _movement.Rolled += OnRolled;
@@ -35,6 +39,7 @@ public class PlayerAnimation : MonoBehaviour
 
     private void OnDisable()
     {
+        _player.Died -= OnDied;
         _movementStick.StickMoved -= OnStickMoved;
         _movement.Turned -= OnTurned;
         _movement.Rolled -= OnRolled;
@@ -63,5 +68,10 @@ public class PlayerAnimation : MonoBehaviour
     private void OnRolled()
     {
         _animator.Play("Roll");
+    }
+
+    private void OnDied()
+    {
+        _animator.Play("Death");
     }
 }

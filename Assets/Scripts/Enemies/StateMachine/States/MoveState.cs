@@ -29,11 +29,11 @@ public class MoveState : State
         TryTurnRight(previousXPosition > transform.position.x);
     }
 
-    private void TryTurnRight(bool state)
+    private void TryTurnRight(bool isTurnedRight)
     {
-        if (state != _isTurnedRight)
+        if (isTurnedRight != _isTurnedRight)
         {
-            _isTurnedRight = state;
+            _isTurnedRight = isTurnedRight;
             _spriteRenderer.flipX = _isTurnedRight;
         }
     }

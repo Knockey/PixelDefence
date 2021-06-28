@@ -28,6 +28,10 @@ public class MeleeAttackState : State
     private void Attack()
     {
         _animator.Play("Attack");
-        Target.ApplyDamage(_damage);
+
+        if (Target.IsVulnerable)
+        {
+            Target.ApplyDamage(_damage);
+        }
     }
 }

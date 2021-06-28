@@ -68,16 +68,22 @@
     <Compile Include="Assets\Resources\Hero Knight - Pixel Art\Demo\DestroyEvent_HeroKnight.cs" />
     <Compile Include="Assets\Resources\Hero Knight - Pixel Art\Demo\HeroKnight.cs" />
     <Compile Include="Assets\Resources\Hero Knight - Pixel Art\Demo\Sensor_HeroKnight.cs" />
+    <Compile Include="Assets\Scenes\Typed\ChooseLevel.cs" />
     <Compile Include="Assets\Scenes\Typed\Demo.cs" />
     <Compile Include="Assets\Scenes\Typed\LevelForest.cs" />
+    <Compile Include="Assets\Scenes\Typed\MainMenu.cs" />
     <Compile Include="Assets\Scenes\Typed\SceneDemo.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\Enemies\Spawner\Spawner.cs" />
     <Compile Include="Assets\Scripts\Enemies\Spawner\Wave.cs" />
     <Compile Include="Assets\Scripts\Enemies\StateMachine\EnemyStateMachine.cs" />
+    <Compile Include="Assets\Scripts\Enemies\StateMachine\SpecialStates\BossEyeStates\EyeMoveState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\StateMachine\SpecialStates\BossEyeStates\EyeRangeAttackState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\StateMachine\SpecialTransitions\BossEyeTransitions\TransitionByFinishedAttack.cs" />
     <Compile Include="Assets\Scripts\Enemies\StateMachine\States\DeathState.cs" />
     <Compile Include="Assets\Scripts\Enemies\StateMachine\States\MeleeAttackState.cs" />
     <Compile Include="Assets\Scripts\Enemies\StateMachine\States\MoveState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\StateMachine\States\RangeAttackState.cs" />
     <Compile Include="Assets\Scripts\Enemies\StateMachine\States\State.cs" />
     <Compile Include="Assets\Scripts\Enemies\StateMachine\States\VictoryState.cs" />
     <Compile Include="Assets\Scripts\Enemies\StateMachine\Transitions\Transition.cs" />
@@ -85,6 +91,7 @@
     <Compile Include="Assets\Scripts\Enemies\StateMachine\Transitions\TransitionByDistance.cs" />
     <Compile Include="Assets\Scripts\Enemies\StateMachine\Transitions\TransitionByTargetDeath.cs" />
     <Compile Include="Assets\Scripts\Enemies\StateMachine\Transitions\TransitionByTargetOutOfRange.cs" />
+    <Compile Include="Assets\Scripts\Enemies\StateMachine\Transitions\TransitionByTimeOut.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IApplyDamage.cs" />
     <Compile Include="Assets\Scripts\Player\AttackZone.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
@@ -94,8 +101,14 @@
     <Compile Include="Assets\Scripts\Player\UI\HealthBar.cs" />
     <Compile Include="Assets\Scripts\Player\UI\PlayerMovementStick.cs" />
     <Compile Include="Assets\Scripts\Player\UI\ProgressBar.cs" />
+    <Compile Include="Assets\Scripts\Projectiles\Fireball.cs" />
+    <Compile Include="Assets\Scripts\Projectiles\Projectile.cs" />
+    <Compile Include="Assets\Scripts\Projectiles\ProjectileWithoutTarget.cs" />
     <Compile Include="Assets\Scripts\UI\Bar.cs" />
+    <Compile Include="Assets\Scripts\UI\ButtonHandler.cs" />
     <Compile Include="Assets\Scripts\UI\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\UI\FadePanel.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
     <None Include="Assets\Resources\Hero Knight - Pixel Art\ColorSwap\Sprites-ColorSwap.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

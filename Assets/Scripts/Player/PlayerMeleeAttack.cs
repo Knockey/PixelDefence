@@ -1,7 +1,9 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Player))]
 [RequireComponent(typeof(PlayerMovement))]
 public class PlayerMeleeAttack : MonoBehaviour
 {
@@ -9,43 +11,48 @@ public class PlayerMeleeAttack : MonoBehaviour
     [SerializeField] private AttackZone _attackZone;
     [SerializeField] private Button _attackButton;
 
+    private Player _player;
     private PlayerMovement _movement;
+    private bool _isAbleToAttack;
     private bool _isTurnedRight;
 
     public event UnityAction Attacked;
 
     private void Awake()
     {
+        _player = GetComponent<Player>();
         _movement = GetComponent<PlayerMovement>();
+
+        _isAbleToAttack = true;
     }
 
     private void OnEnable()
     {
+        _player.Died += OnDied;
         _movement.Turned += OnTurned;
         _attackButton.onClick.AddListener(Attack);
     }
-
-
     private void OnDisable()
     {
+        _player.Died -= OnDied;
         _movement.Turned -= OnTurned;
         _attackButton.onClick.RemoveListener(Attack);
     }
 
-    private void Update()
+    private void OnDied()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Attack();
-        }
+        _isAbleToAttack = false;
     }
 
     private void Attack()
     {
-        Attacked?.Invoke();
-        foreach (var enemy in _attackZone.GetEnemiesInRange())
+        if (_isAbleToAttack)
         {
-            enemy.ApplyDamage(_damage);
+            Attacked?.Invoke();
+            foreach (var enemy in _attackZone.GetEnemiesInRange())
+            {
+                enemy.ApplyDamage(_damage);
+            }
         }
     }
 
