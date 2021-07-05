@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class State : MonoBehaviour
 {
-    [SerializeField] private List<Transition> _transitions;
+    [SerializeField] private List<Transition> _transitions;    
+    [SerializeField] protected AudioSource StateSound;
 
     protected Player Target { get; set; }
 
@@ -38,6 +39,11 @@ public class State : MonoBehaviour
     {
         if (enabled)
         {
+            if (StateSound != null)
+            {
+                StateSound.Stop();
+            }
+
             foreach (var transition in _transitions)
             {
                 transition.enabled = false;

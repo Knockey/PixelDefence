@@ -3,20 +3,17 @@ using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(BoxCollider))]
-[RequireComponent(typeof(SpriteRenderer))]
 public class DeathState : State
 {
     [SerializeField] private float _timeUntillDeath = 1f;
 
     private Animator _animator;
     private BoxCollider _collider;
-    private SpriteRenderer _spriteRenderer;
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
         _collider = GetComponent<BoxCollider>();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void OnEnable()
@@ -27,8 +24,12 @@ public class DeathState : State
     private IEnumerator Die()
     {
         _collider.enabled = false;
-        _spriteRenderer.flipX = !_spriteRenderer.flipX;
         _animator.SetTrigger("Died");
+
+        if (StateSound != null)
+        {
+            StateSound.Play();
+        }
 
         yield return new WaitForSeconds(_timeUntillDeath);
 

@@ -27,6 +27,11 @@ public class MeleeAttackState : State
 
     private void Attack()
     {
+        if (StateSound != null)
+        {
+            StateSound.Play();
+        }
+
         _animator.Play("Attack");
 
         if (Target.IsVulnerable)

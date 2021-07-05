@@ -16,6 +16,7 @@ public class Spawner : MonoBehaviour
     private int _diedEnemiesCount = 0;
 
     public event UnityAction<int, int> EnemyDied;
+    public event UnityAction WaveStarted;
     public event UnityAction WaveFinished;
     public event UnityAction GameFinished;
 
@@ -67,7 +68,6 @@ public class Spawner : MonoBehaviour
         enemy.Died -= OnEnemyDied;
 
         _diedEnemiesCount++;
-        _target.AddMoney(enemy.Reward);
         EnemyDied?.Invoke(_diedEnemiesCount, _enemiesInWaveCount);
 
         if (_diedEnemiesCount >= _enemiesInWaveCount)
@@ -99,5 +99,8 @@ public class Spawner : MonoBehaviour
         _currentWave = SetWave(++_currentWaveIndex);
         _spawnedEnemiesCount = 0;
         _diedEnemiesCount = 0;
+
+        WaveStarted?.Invoke();
+        EnemyDied?.Invoke(_diedEnemiesCount, _enemiesInWaveCount);
     }
 }

@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -30,6 +29,18 @@ public class EyeRangeAttackState : State
     {
         _animator.Play("RangeAttack");
 
+        if (StateSound != null)
+        {
+            StateSound.Play();
+        }
+
+        SpawnProjectiles();
+
+        StartCoroutine(Delay());
+    }
+
+    private void SpawnProjectiles()
+    {
         Vector3 shootPoint = transform.position;
         shootPoint.y = shootPoint.y - _movement.FlightHeight + _heightOverGround;
 
@@ -45,8 +56,6 @@ public class EyeRangeAttackState : State
             projectile.transform.rotation = Quaternion.Euler(0f, newRotationAngle, 0f);
             projectile.Init(transform, _damage, direction);
         }
-
-        StartCoroutine(Delay());
     }
 
     private IEnumerator Delay()

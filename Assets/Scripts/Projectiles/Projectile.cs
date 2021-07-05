@@ -15,10 +15,10 @@ public abstract class Projectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        ProjectileCollided(other);
+        ProjectileCollide(other);
     }
 
-    protected void ProjectileCollided(Collider other)
+    protected void ProjectileCollide(Collider other)
     {
         if (other.gameObject.TryGetComponent(out Player player))
         {

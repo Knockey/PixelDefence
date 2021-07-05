@@ -29,7 +29,12 @@ public class RangeAttackState : State
 
     private void Attack()
     {
-        _animator.Play("Attack");
+        _animator.Play("Attack"); 
+        
+        if (StateSound != null)
+        {
+            StateSound.Play();
+        }
 
         var projectile = Instantiate(_fireball, _shootPoint.position, Quaternion.identity);
         projectile.Init(_shootPoint, _damage, Target);

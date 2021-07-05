@@ -19,6 +19,11 @@ public class MoveState : State
     private void OnEnable()
     {
         _animator.Play("Run");
+
+        if (StateSound != null)
+        {
+            StateSound.Play();
+        }
     }
 
     private void Update()

@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -10,6 +10,7 @@ public class PlayerMeleeAttack : MonoBehaviour
     [SerializeField] private int _damage;
     [SerializeField] private AttackZone _attackZone;
     [SerializeField] private Button _attackButton;
+    [SerializeField] private float _attackDelay = 0.35f;
 
     private Player _player;
     private PlayerMovement _movement;
@@ -53,6 +54,8 @@ public class PlayerMeleeAttack : MonoBehaviour
             {
                 enemy.ApplyDamage(_damage);
             }
+
+            StartCoroutine(StartDelayTimer());
         }
     }
 
@@ -66,5 +69,14 @@ public class PlayerMeleeAttack : MonoBehaviour
             _attackZone.transform.localPosition = newAttackZonePosition;
             _isTurnedRight = state;
         }
+    }
+
+    private IEnumerator StartDelayTimer()
+    {
+        _isAbleToAttack = false;
+
+        yield return new WaitForSeconds(_attackDelay);
+
+        _isAbleToAttack = true;
     }
 }

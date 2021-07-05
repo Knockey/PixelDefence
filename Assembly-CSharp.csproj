@@ -71,7 +71,8 @@
     <Compile Include="Assets\Scenes\Typed\ChooseLevel.cs" />
     <Compile Include="Assets\Scenes\Typed\Demo.cs" />
     <Compile Include="Assets\Scenes\Typed\LevelForest.cs" />
-    <Compile Include="Assets\Scenes\Typed\MainMenu.cs" />
+    <Compile Include="Assets\Scenes\Typed\LevelSnow.cs" />
+    <Compile Include="Assets\Scenes\Typed\MainMenuScene.cs" />
     <Compile Include="Assets\Scenes\Typed\SceneDemo.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\Enemies\Spawner\Spawner.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Assets\Scripts\Enemies\StateMachine\EnemyStateMachine.cs" />
     <Compile Include="Assets\Scripts\Enemies\StateMachine\SpecialStates\BossEyeStates\EyeMoveState.cs" />
     <Compile Include="Assets\Scripts\Enemies\StateMachine\SpecialStates\BossEyeStates\EyeRangeAttackState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\StateMachine\SpecialStates\MinotaurDeathState.cs" />
     <Compile Include="Assets\Scripts\Enemies\StateMachine\SpecialTransitions\BossEyeTransitions\TransitionByFinishedAttack.cs" />
     <Compile Include="Assets\Scripts\Enemies\StateMachine\States\DeathState.cs" />
     <Compile Include="Assets\Scripts\Enemies\StateMachine\States\MeleeAttackState.cs" />
@@ -92,12 +94,15 @@
     <Compile Include="Assets\Scripts\Enemies\StateMachine\Transitions\TransitionByTargetDeath.cs" />
     <Compile Include="Assets\Scripts\Enemies\StateMachine\Transitions\TransitionByTargetOutOfRange.cs" />
     <Compile Include="Assets\Scripts\Enemies\StateMachine\Transitions\TransitionByTimeOut.cs" />
+    <Compile Include="Assets\Scripts\GameCycles\LevelFinished.cs" />
+    <Compile Include="Assets\Scripts\GameCycles\NextWave.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IApplyDamage.cs" />
     <Compile Include="Assets\Scripts\Player\AttackZone.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAnimation.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMeleeAttack.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerSounds.cs" />
     <Compile Include="Assets\Scripts\Player\UI\HealthBar.cs" />
     <Compile Include="Assets\Scripts\Player\UI\PlayerMovementStick.cs" />
     <Compile Include="Assets\Scripts\Player\UI\ProgressBar.cs" />
@@ -107,8 +112,15 @@
     <Compile Include="Assets\Scripts\UI\Bar.cs" />
     <Compile Include="Assets\Scripts\UI\ButtonHandler.cs" />
     <Compile Include="Assets\Scripts\UI\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\UI\ChooseLevelMenu.cs" />
     <Compile Include="Assets\Scripts\UI\FadePanel.cs" />
+    <Compile Include="Assets\Scripts\UI\GameFinishedMenu.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenuButton.cs" />
+    <Compile Include="Assets\Scripts\UI\PauseButton.cs" />
+    <Compile Include="Assets\Scripts\UI\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\UI\PlayerDiedMenu.cs" />
+    <Compile Include="Assets\Scripts\UI\WaveNumberView.cs" />
     <None Include="Assets\Resources\Hero Knight - Pixel Art\ColorSwap\Sprites-ColorSwap.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

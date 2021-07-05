@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Player))]
-[RequireComponent(typeof(BoxCollider))]
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float _speed;
@@ -21,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     public event UnityAction<bool> Turned;
     public event UnityAction Rolled;
-    public event UnityAction<bool> ChangeVulnerability;
+    public event UnityAction<bool> VulnerabilityChanged;
 
     private void Awake()
     {
@@ -76,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
                 StopCoroutine(_rollCoroutine);
             }
 
-            _rollCoroutine = StartCoroutine(ChangeInvulnerability());
+            _rollCoroutine = StartCoroutine(ChangeVulnerability());
 
             Move(_direction, _rollDistance);
         }
@@ -93,13 +91,13 @@ public class PlayerMovement : MonoBehaviour
         Turned?.Invoke(previousXPosition > transform.position.x);
     }
 
-    private IEnumerator ChangeInvulnerability()
+    private IEnumerator ChangeVulnerability()
     {
-        ChangeVulnerability?.Invoke(false);
+        VulnerabilityChanged?.Invoke(false);
 
         yield return new WaitForSeconds(_invulnerabilityTimeInRoll);
 
-        ChangeVulnerability?.Invoke(true);
+        VulnerabilityChanged?.Invoke(true);
     }
 }
 

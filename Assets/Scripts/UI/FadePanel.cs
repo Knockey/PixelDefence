@@ -20,9 +20,9 @@ public class FadePanel : MonoBehaviour
 
     private void OnValidate()
     {
-        if (_absoluteFadeValue > 255f || _absoluteFadeValue < 0f)
+        if (_absoluteFadeValue > 1f || _absoluteFadeValue < 0f)
         {
-            _absoluteFadeValue = 255f;
+            _absoluteFadeValue = 1f;
         }
     }
 

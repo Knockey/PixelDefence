@@ -18,7 +18,6 @@ public class EyeMoveState : State
         _animator = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
 
-
         Vector3 initialPosition = transform.position;
         initialPosition.y += _flightHeight;
         transform.position = initialPosition;
@@ -26,7 +25,12 @@ public class EyeMoveState : State
 
     private void OnEnable()
     {
-        _animator.Play("Flight");        
+        _animator.Play("Flight");
+
+        if (StateSound != null)
+        {
+            StateSound.Play();
+        }
     }
 
     private void Update()
