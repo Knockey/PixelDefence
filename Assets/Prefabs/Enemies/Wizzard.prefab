@@ -207,8 +207,8 @@ MonoBehaviour:
   - {fileID: 9082461322368473947}
   - {fileID: 7821446312796233263}
   StateSound: {fileID: 9136868129556907525}
-  _damage: 5
-  _attackDelay: 1
+  _damage: 3
+  _attackDelay: 3
   _fireball: {fileID: 8938601001084663936, guid: c97d5d3c01071d84e9ea6caf42817266,
     type: 3}
   _shootPoint: {fileID: 1096266659336100332}

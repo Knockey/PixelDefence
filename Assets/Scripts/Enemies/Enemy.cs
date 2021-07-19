@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-public class Enemy : MonoBehaviour, IApplyDamage
+public class Enemy : MonoBehaviour, IDamageApplier
 {
     [SerializeField] private int _health;
     [SerializeField] private ParticleSystem _bloodParticle;

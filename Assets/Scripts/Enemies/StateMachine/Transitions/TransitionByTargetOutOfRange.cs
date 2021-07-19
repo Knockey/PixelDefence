@@ -14,7 +14,9 @@ public class TransitionByTargetOutOfRange : Transition
 
     private void Update()
     {
-        if (Vector2.Distance(transform.position, Target.transform.position) > _transitionDistance)
+        if (Vector3.Distance(transform.position, Target.transform.position) > _transitionDistance)
+        {
             NeedTransit = true;
+        }
     }
 }

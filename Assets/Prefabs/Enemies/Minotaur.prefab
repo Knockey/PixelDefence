@@ -300,7 +300,7 @@ MonoBehaviour:
   - {fileID: 6531271099137009254}
   - {fileID: 6531271099137009252}
   StateSound: {fileID: 3395772800523976903}
-  _speed: 5
+  _speed: 4
 --- !u!114 &6531271099137009254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,7 +333,7 @@ MonoBehaviour:
   - {fileID: 6531271099137009252}
   - {fileID: 6531271099137009258}
   StateSound: {fileID: 9046523283690342011}
-  _damage: 8
+  _damage: 5
   _attackDelay: 1
 --- !u!114 &6531271099137009248
 MonoBehaviour:

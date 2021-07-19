@@ -522,6 +522,7 @@ GameObject:
   - component: {fileID: 1263496321849207002}
   - component: {fileID: 1263496321849207005}
   - component: {fileID: 1263496321849207004}
+  - component: {fileID: 4013071290573489834}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -673,9 +674,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 5
   _rollDistance: 5
-  _invulnerabilityTimeInRoll: 1
   _stick: {fileID: 0}
   _rollButton: {fileID: 0}
+  _terrainMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1263496321849207002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -721,3 +724,16 @@ MonoBehaviour:
   _attackSound: {fileID: 1263496320739058050}
   _moveSound: {fileID: 1263496321386977324}
   _deathSound: {fileID: 1263496321065708127}
+--- !u!114 &4013071290573489834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263496321849206994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e4c93ded8987ad42a2343524f0195a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _invulnerabilityTimeInRoll: 1

@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02ea3494be06f94f9c14f672854945a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 40
+  _health: 30
   _bloodParticle: {fileID: 565361672468927870}
 --- !u!114 &730537119352264733
 MonoBehaviour:
@@ -353,7 +353,7 @@ MonoBehaviour:
   - {fileID: -7290636622781911172}
   - {fileID: -712804321180582160}
   StateSound: {fileID: 2900495175028255140}
-  _damage: 10
+  _damage: 7
   _attackDelay: 1
 --- !u!114 &-7290636622781911172
 MonoBehaviour:
@@ -387,7 +387,7 @@ MonoBehaviour:
   - {fileID: -2916167493477911788}
   - {fileID: -671395824800461099}
   StateSound: {fileID: 5937804391429136238}
-  _damage: 15
+  _damage: 5
   _projectile: {fileID: 561131030075759556, guid: 98a0af5fd722ac943a4c43ca670d9f31,
     type: 3}
   _movement: {fileID: 2102665111404385214}

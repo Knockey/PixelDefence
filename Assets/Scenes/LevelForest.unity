@@ -8308,6 +8308,11 @@ PrefabInstance:
       propertyPath: _rollButton
       value: 
       objectReference: {fileID: 295609038}
+    - target: {fileID: 1263496321849206997, guid: c898eedfe1c097d4ca0dcebfe52eba20,
+        type: 3}
+      propertyPath: _terrainMask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 1263496321849206998, guid: c898eedfe1c097d4ca0dcebfe52eba20,
         type: 3}
       propertyPath: m_RootOrder
@@ -8520,7 +8525,7 @@ MonoBehaviour:
   - _enemies:
     - {fileID: 431392747391247659, guid: 4f66e818ea302714cb706fc8618fffd9, type: 3}
     _spawnDelay: 1
-    _enemiesCount: 7
+    _enemiesCount: 1
   - _enemies:
     - {fileID: 431392747391247659, guid: 4f66e818ea302714cb706fc8618fffd9, type: 3}
     - {fileID: 7245075257169381279, guid: d98ecc0ff18861a4ba948639eb063b5c, type: 3}
@@ -10381,7 +10386,7 @@ GameObject:
   - component: {fileID: 1729598734}
   - component: {fileID: 1729598733}
   - component: {fileID: 1729598732}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}

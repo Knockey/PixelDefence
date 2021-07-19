@@ -2,7 +2,7 @@
 using UnityEngine.Events;
 
 [RequireComponent(typeof(PlayerMovement))]
-public class Player : MonoBehaviour, IApplyDamage
+public class Player : MonoBehaviour, IDamageApplier
 {
     [SerializeField] private int _maxHealth;
     [SerializeField] private Spawner _spawner;
@@ -10,7 +10,7 @@ public class Player : MonoBehaviour, IApplyDamage
     private int _health;
     private bool _isAlive = true;
     private bool _isVulnerable = true;
-    private PlayerMovement _movement;
+    private PlayerVulnerabillity _vulnerability;
 
     public bool IsAlive => _isAlive;
     public bool IsVulnerable => _isVulnerable;
@@ -20,18 +20,18 @@ public class Player : MonoBehaviour, IApplyDamage
 
     private void Awake()
     {
-        _movement = GetComponent<PlayerMovement>();
+        _vulnerability = GetComponent<PlayerVulnerabillity>();
     }
 
     private void OnEnable()
     {
-        _movement.VulnerabilityChanged += OnVulnerabilityChanged;
+        _vulnerability.VulnerabilityChanged += OnVulnerabilityChanged;
         _spawner.WaveFinished += OnWaveFinished;
     }
 
     private void OnDisable()
     {
-        _movement.VulnerabilityChanged -= OnVulnerabilityChanged;
+        _vulnerability.VulnerabilityChanged -= OnVulnerabilityChanged;
         _spawner.WaveFinished -= OnWaveFinished;
     }
 
