@@ -8298,6 +8298,11 @@ PrefabInstance:
       propertyPath: _spawner
       value: 
       objectReference: {fileID: 1350990694}
+    - target: {fileID: 1263496321849206996, guid: c898eedfe1c097d4ca0dcebfe52eba20,
+        type: 3}
+      propertyPath: _maxHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1263496321849206997, guid: c898eedfe1c097d4ca0dcebfe52eba20,
         type: 3}
       propertyPath: _stick
@@ -8525,7 +8530,7 @@ MonoBehaviour:
   - _enemies:
     - {fileID: 431392747391247659, guid: 4f66e818ea302714cb706fc8618fffd9, type: 3}
     _spawnDelay: 1
-    _enemiesCount: 1
+    _enemiesCount: 7
   - _enemies:
     - {fileID: 431392747391247659, guid: 4f66e818ea302714cb706fc8618fffd9, type: 3}
     - {fileID: 7245075257169381279, guid: d98ecc0ff18861a4ba948639eb063b5c, type: 3}

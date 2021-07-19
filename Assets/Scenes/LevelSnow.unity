@@ -5716,6 +5716,11 @@ PrefabInstance:
       propertyPath: _spawner
       value: 
       objectReference: {fileID: 1350990694}
+    - target: {fileID: 1263496321849206996, guid: c898eedfe1c097d4ca0dcebfe52eba20,
+        type: 3}
+      propertyPath: _maxHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1263496321849206997, guid: c898eedfe1c097d4ca0dcebfe52eba20,
         type: 3}
       propertyPath: _stick
