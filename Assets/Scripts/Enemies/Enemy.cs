@@ -1,16 +1,22 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(HitParticleEmitter))]
 public class Enemy : MonoBehaviour, IDamageApplier
 {
     [SerializeField] private int _health;
-    [SerializeField] private ParticleSystem _bloodParticle;
     
     private Player _target;
+    private HitParticleEmitter _hitParticleEmitter;
 
     public Player Target => _target;
 
     public event UnityAction<Enemy> Died;
+
+    private void Awake()
+    {
+        _hitParticleEmitter = GetComponent<HitParticleEmitter>();
+    }
 
     private void Die()
     {
@@ -23,7 +29,7 @@ public class Enemy : MonoBehaviour, IDamageApplier
 
         if (this != null)
         {
-            _bloodParticle.Play();
+            _hitParticleEmitter.EmitParticle();
         }
 
         if (_health <= 0)

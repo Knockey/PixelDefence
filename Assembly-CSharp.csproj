@@ -75,8 +75,7 @@
     <Compile Include="Assets\Scenes\Typed\MainMenuScene.cs" />
     <Compile Include="Assets\Scenes\Typed\SceneDemo.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
-    <Compile Include="Assets\Scripts\Enemies\Spawner\Spawner.cs" />
-    <Compile Include="Assets\Scripts\Enemies\Spawner\Wave.cs" />
+    <Compile Include="Assets\Scripts\Enemies\HitParticleEmitter.cs" />
     <Compile Include="Assets\Scripts\Enemies\StateMachine\EnemyStateMachine.cs" />
     <Compile Include="Assets\Scripts\Enemies\StateMachine\SpecialStates\BossEyeStates\EyeMoveState.cs" />
     <Compile Include="Assets\Scripts\Enemies\StateMachine\SpecialStates\BossEyeStates\EyeRangeAttackState.cs" />
@@ -94,8 +93,6 @@
     <Compile Include="Assets\Scripts\Enemies\StateMachine\Transitions\TransitionByTargetDeath.cs" />
     <Compile Include="Assets\Scripts\Enemies\StateMachine\Transitions\TransitionByTargetOutOfRange.cs" />
     <Compile Include="Assets\Scripts\Enemies\StateMachine\Transitions\TransitionByTimeOut.cs" />
-    <Compile Include="Assets\Scripts\GameCycles\LevelFinished.cs" />
-    <Compile Include="Assets\Scripts\GameCycles\NextWave.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IDamageApplier.cs" />
     <Compile Include="Assets\Scripts\Player\AttackZone.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
@@ -110,11 +107,15 @@
     <Compile Include="Assets\Scripts\Projectiles\Fireball.cs" />
     <Compile Include="Assets\Scripts\Projectiles\Projectile.cs" />
     <Compile Include="Assets\Scripts\Projectiles\ProjectileWithoutTarget.cs" />
+    <Compile Include="Assets\Scripts\Spawner\Spawner.cs" />
+    <Compile Include="Assets\Scripts\Spawner\Wave.cs" />
     <Compile Include="Assets\Scripts\UI\Bar.cs" />
     <Compile Include="Assets\Scripts\UI\ButtonHandler.cs" />
     <Compile Include="Assets\Scripts\UI\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\UI\ChooseLevelMenu.cs" />
     <Compile Include="Assets\Scripts\UI\FadePanel.cs" />
+    <Compile Include="Assets\Scripts\UI\GameCycles\LevelFinished.cs" />
+    <Compile Include="Assets\Scripts\UI\GameCycles\NextWave.cs" />
     <Compile Include="Assets\Scripts\UI\GameFinishedMenu.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuButton.cs" />
